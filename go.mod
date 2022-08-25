@@ -1,4 +1,4 @@
-module Banking
+module github.com/gtaylor314/Banking-MS
 
 go 1.18
 
