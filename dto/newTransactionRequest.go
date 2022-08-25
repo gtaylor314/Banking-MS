@@ -1,8 +1,9 @@
 package dto
 
 import (
-	"Banking/errs"
 	"strings"
+
+	"github.com/gtaylor314/Banking-MS/errs"
 )
 
 // NewTransactionRequest is a dto which provides customer sourced data to the domain for transaction creation

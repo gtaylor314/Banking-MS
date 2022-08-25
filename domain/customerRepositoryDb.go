@@ -1,9 +1,10 @@
 package domain
 
 import (
-	"Banking/errs"
-	"Banking/logger"
 	"database/sql"
+
+	"github.com/gtaylor314/Banking-MS/errs"
+	"github.com/gtaylor314/Banking-MS/logger"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"

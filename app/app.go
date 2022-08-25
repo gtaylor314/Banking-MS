@@ -1,13 +1,14 @@
 package app
 
 import (
-	"Banking/domain"
-	"Banking/service"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/gtaylor314/Banking-MS/domain"
+	"github.com/gtaylor314/Banking-MS/service"
 
 	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"

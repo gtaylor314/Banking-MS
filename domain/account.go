@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"Banking/dto"
-	"Banking/errs"
+	"github.com/gtaylor314/Banking-MS/dto"
+	"github.com/gtaylor314/Banking-MS/errs"
 )
 
 type Account struct {

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Banking/app"
-	"Banking/logger"
+	"github.com/gtaylor314/Banking-MS/app"
+	"github.com/gtaylor314/Banking-MS/logger"
 )
 
 func main() {

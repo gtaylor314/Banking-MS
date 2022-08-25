@@ -1,10 +1,11 @@
 package app
 
 import (
-	"Banking/dto"
-	"Banking/service"
 	"encoding/json"
 	"net/http"
+
+	"github.com/gtaylor314/Banking-MS/dto"
+	"github.com/gtaylor314/Banking-MS/service"
 
 	"github.com/gorilla/mux"
 )

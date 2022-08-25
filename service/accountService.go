@@ -1,10 +1,11 @@
 package service
 
 import (
-	"Banking/domain"
-	"Banking/dto"
-	"Banking/errs"
 	"time"
+
+	"github.com/gtaylor314/Banking-MS/domain"
+	"github.com/gtaylor314/Banking-MS/dto"
+	"github.com/gtaylor314/Banking-MS/errs"
 )
 
 // AccountService is a "port" implemented by the domain

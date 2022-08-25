@@ -1,9 +1,9 @@
 package service
 
 import (
-	"Banking/domain"
-	"Banking/dto"
-	"Banking/errs"
+	"github.com/gtaylor314/Banking-MS/domain"
+	"github.com/gtaylor314/Banking-MS/dto"
+	"github.com/gtaylor314/Banking-MS/errs"
 )
 
 // CustomerService is another "port" (interface)  - users and external sources will interact with the business logic
