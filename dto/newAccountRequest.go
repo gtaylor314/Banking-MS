@@ -3,7 +3,7 @@ package dto
 import (
 	"strings"
 
-	"github.com/gtaylor314/Banking-MS/errs"
+	"github.com/gtaylor314/Banking-Lib/errs"
 )
 
 // NewAccountRequest is a dto which provides customer generated data to the domain for account creation

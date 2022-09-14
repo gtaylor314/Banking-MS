@@ -1,8 +1,8 @@
 package domain
 
 import (
+	"github.com/gtaylor314/Banking-Lib/errs"
 	"github.com/gtaylor314/Banking-MS/dto"
-	"github.com/gtaylor314/Banking-MS/errs"
 )
 
 type Transaction struct {

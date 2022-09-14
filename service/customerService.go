@@ -1,10 +1,17 @@
 package service
 
 import (
+	"github.com/gtaylor314/Banking-Lib/errs"
 	"github.com/gtaylor314/Banking-MS/domain"
 	"github.com/gtaylor314/Banking-MS/dto"
-	"github.com/gtaylor314/Banking-MS/errs"
 )
+
+// to generate a mock of the CustomerService interface for testing, we use the comment ("tag") shown below
+// we want the mock files to be located in the subfolder mocks/service/ and named mockCustomerService.go
+// we identify the package as service and provide the full path to the service package, followed by the interface
+// name (CustomerService)
+
+//go:generate mockgen -destination=../mocks/service/mockCustomerService.go -package=service github.com/gtaylor314/Banking-MS/service CustomerService
 
 // CustomerService is another "port" (interface)  - users and external sources will interact with the business logic
 // via this "port"

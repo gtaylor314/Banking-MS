@@ -3,9 +3,9 @@ package service
 import (
 	"time"
 
+	"github.com/gtaylor314/Banking-Lib/errs"
 	"github.com/gtaylor314/Banking-MS/domain"
 	"github.com/gtaylor314/Banking-MS/dto"
-	"github.com/gtaylor314/Banking-MS/errs"
 )
 
 // TransactionService is a "port" implemented by the domain

@@ -62,14 +62,17 @@ func Start() {
 	tranHandler := TransactionHandler{service: service.NewTransactionService(transactionRepositoryDb)}
 
 	// registering the handler functions for the given patterns (routes)
-	router.HandleFunc("/customers", custHandler.getAllCustomers).Methods(http.MethodGet)
+	router.HandleFunc("/customers", custHandler.getAllCustomers).Methods(http.MethodGet).Name("GetAllCustomers")
 	// here we use a variable (customer_id) in the path and use a regular expression (:[0-9]+) to indicate that the customer_id
 	// will only be comprised of numerical digits 0 - 9 which can repeat (+)
-	router.HandleFunc("/customers/{customer_id:[0-9]+}", custHandler.getCustomer).Methods(http.MethodGet)
+	router.HandleFunc("/customers/{customer_id:[0-9]+}", custHandler.getCustomer).Methods(http.MethodGet).Name("GetCustomer")
 	// handler for creating an account - customer_id is required as accounts can only be created by existing customers
-	router.HandleFunc("/customers/{customer_id:[0-9]+}/account", acctHandler.newAccount).Methods(http.MethodPost)
+	router.HandleFunc("/customers/{customer_id:[0-9]+}/account", acctHandler.newAccount).Methods(http.MethodPost).Name("NewAccount")
 	// handler for creating a transaction - customer_id is required as transactions can only be created by existing customers
-	router.HandleFunc("/customers/{customer_id:[0-9]+}/transaction", tranHandler.newTransaction).Methods(http.MethodPost)
+	router.HandleFunc("/customers/{customer_id:[0-9]+}/transaction", tranHandler.newTransaction).Methods(http.MethodPost).Name("NewTransaction")
+
+	authMidware := AuthMiddleware{repo: domain.NewAuthRepository()}
+	router.Use(authMidware.authorizationHandler())
 
 	// we use environment variables to inject the server address and port (see Makefile)
 	serverAdd := os.Getenv("SERVER_ADDRESS")
